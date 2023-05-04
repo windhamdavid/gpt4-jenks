@@ -25,7 +25,7 @@ export default function Home() {
   }>({
     messages: [
       {
-        message: 'Hi, what would you like to learn about this legal case?',
+        message: 'What would you like to learn about this dissertation?',
         type: 'apiMessage',
       },
     ],
@@ -40,6 +40,11 @@ export default function Home() {
   useEffect(() => {
     textAreaRef.current?.focus();
   }, []);
+
+  useEffect(() => {
+    document.title = 'TedBot';
+  }, []);
+
 
   //handle form submission
   async function handleSubmit(e: any) {
@@ -125,8 +130,14 @@ export default function Home() {
       <Layout>
         <div className="mx-auto flex flex-col gap-4">
           <h1 className="text-2xl font-bold leading-[1.1] tracking-tighter text-center">
-            Chat With Your Legal Docs
+            Chat With Professor Jenks Ed.D. Dissertation
           </h1>
+          <h2 className="text-1xl leading-[.5] tracking-tighter text-center">
+          THE EFFECTS OF PROJECT-BASED GAME DEVELOPMENT ON STUDENT LEARNING AND ATTITUDES:
+          </h2>
+          <h2 className="text-1xl leading-[.5] tracking-tighter text-center">
+          ACTION RESEARCH IN AN 8TH GRADE INTRODUCTORY COMPUTER SCIENCE COURSE
+          </h2>
           <main className={styles.main}>
             <div className={styles.cloud}>
               <div ref={messageListRef} className={styles.messagelist}>
@@ -137,7 +148,7 @@ export default function Home() {
                     icon = (
                       <Image
                         key={index}
-                        src="/bot-image.png"
+                        src="/bot.png"
                         alt="AI"
                         width="40"
                         height="40"
@@ -150,10 +161,10 @@ export default function Home() {
                     icon = (
                       <Image
                         key={index}
-                        src="/usericon.png"
+                        src="/user.png"
                         alt="Me"
-                        width="30"
-                        height="30"
+                        width="40"
+                        height="40"
                         className={styles.usericon}
                         priority
                       />
@@ -224,7 +235,7 @@ export default function Home() {
                     placeholder={
                       loading
                         ? 'Waiting for response...'
-                        : 'What is this legal case about?'
+                        : 'What is this dissertation about?'
                     }
                     value={query}
                     onChange={(e) => setQuery(e.target.value)}
@@ -260,10 +271,16 @@ export default function Home() {
             )}
           </main>
         </div>
-        <footer className="m-auto p-4">
-          <a href="https://twitter.com/mayowaoshin">
-            Powered by LangChainAI. Demo built by Mayo (Twitter: @mayowaoshin).
-          </a>
+        <footer className="footer m-auto p-4">
+          <h3 className="text-1xl leading-[2] tracking-tighter text-center">
+            Powered by <a className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600" href="https://openai.com">OpenAI</a> GPT-4 and <a className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600" href="https://python.langchain.com/en/latest/index.html">LangChain</a>.
+          </h3>
+          <h3 className="text-1xl leading-[2] tracking-tighter text-center">
+            Git Repo @ <a className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600" href="https://openai.com">github.com/windhamdavid/gpt4-jenks</a>.
+          </h3>
+          <h3 className="text-1xl leading-[2] tracking-tighter text-center">
+            Research Paper &copy; Copyright by Theodore G. Jenks, 2022
+          </h3>
         </footer>
       </Layout>
     </>
