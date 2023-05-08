@@ -132,10 +132,10 @@ export default function Home() {
           <h1 className="text-2xl font-bold leading-[1.1] tracking-tighter text-center">
             Chat With Professor Jenks Ed.D. Dissertation
           </h1>
-          <h2 className="text-1xl leading-[.5] tracking-tighter text-center">
+          <h2 className="text-1xl leading-[1] tracking-tighter text-center">
           THE EFFECTS OF PROJECT-BASED GAME DEVELOPMENT ON STUDENT LEARNING AND ATTITUDES:
           </h2>
-          <h2 className="text-1xl leading-[.5] tracking-tighter text-center">
+          <h2 className="text-1xl leading-[1] tracking-tighter text-center">
           ACTION RESEARCH IN AN 8TH GRADE INTRODUCTORY COMPUTER SCIENCE COURSE
           </h2>
           <main className={styles.main}>
@@ -235,7 +235,7 @@ export default function Home() {
                     placeholder={
                       loading
                         ? 'Waiting for response...'
-                        : 'What is this dissertation about?'
+                        : 'Ask a question'
                     }
                     value={query}
                     onChange={(e) => setQuery(e.target.value)}
@@ -274,9 +274,6 @@ export default function Home() {
         <footer className="footer m-auto p-4">
           <h3 className="text-1xl leading-[2] tracking-tighter text-center">
             Powered by <a className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600" href="https://openai.com">OpenAI</a> GPT-4 and <a className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600" href="https://python.langchain.com/en/latest/index.html">LangChain</a>.
-          </h3>
-          <h3 className="text-1xl leading-[2] tracking-tighter text-center">
-            Git Repo @ <a className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600" href="https://openai.com">github.com/windhamdavid/gpt4-jenks</a>.
           </h3>
           <h3 className="text-1xl leading-[2] tracking-tighter text-center">
             Research Paper &copy; Copyright by Theodore G. Jenks, 2022

@@ -1,6 +1,6 @@
 ## GPT-4 Jenks
 
-👉🏼 Fork [https://github.com/mayooear/gpt4-pdf-chatbot-langchain](https://github.com/mayooear/gpt4-pdf-chatbot-langchain)
+👉🏼 Fork [https://github.com/mayooear/gpt4-pdf-chatbot-langchain](https://github.com/mayooear/gpt4-pdf-chatbot-langchain)  
 👉🏼 Frontend inspired by [langchain-chat-nextjs](https://github.com/zahidkhawaja/langchain-chat-nextjs)
 
 ### Built With
